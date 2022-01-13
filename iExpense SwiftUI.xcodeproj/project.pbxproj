@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4B55B1F27908AB300CDCBDE /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B55B1E27908AB300CDCBDE /* AddView.swift */; };
 		A4D2A174278F7F9300843C4E /* iExpense_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D2A173278F7F9300843C4E /* iExpense_SwiftUIApp.swift */; };
 		A4D2A176278F7F9300843C4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D2A175278F7F9300843C4E /* ContentView.swift */; };
 		A4D2A178278F7F9400843C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D2A177278F7F9400843C4E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4B55B1E27908AB300CDCBDE /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		A4D2A170278F7F9300843C4E /* iExpense SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iExpense SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D2A173278F7F9300843C4E /* iExpense_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpense_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A4D2A175278F7F9300843C4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				A4D2A173278F7F9300843C4E /* iExpense_SwiftUIApp.swift */,
 				A4D2A175278F7F9300843C4E /* ContentView.swift */,
+				A4B55B1E27908AB300CDCBDE /* AddView.swift */,
 				A4D2A18127906DBB00843C4E /* ExpenseItem.swift */,
 				A4D2A18327906FD500843C4E /* Expenses.swift */,
 				A4D2A177278F7F9400843C4E /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				A4D2A18427906FD500843C4E /* Expenses.swift in Sources */,
 				A4D2A176278F7F9300843C4E /* ContentView.swift in Sources */,
+				A4B55B1F27908AB300CDCBDE /* AddView.swift in Sources */,
 				A4D2A18227906DBB00843C4E /* ExpenseItem.swift in Sources */,
 				A4D2A174278F7F9300843C4E /* iExpense_SwiftUIApp.swift in Sources */,
 			);
