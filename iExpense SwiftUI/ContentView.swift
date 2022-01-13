@@ -12,13 +12,37 @@ struct ContentView: View {
     
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
-       
+    @State private var summOfAmount = 0.0
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    Text(item.name)
+                Section {
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Text("Sum:")
+                        Text(summOfAmount, format: .currency(code: "USD"))
+                            
+                            .onAppear(perform: summOfItemsAmount)
+                        
+                    }
+                       
+                    
                 }
+                ForEach(expenses.items) { item in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.type)
+                        }
+                        Spacer()
+                        Text(item.amount, format: .currency(code: "USD"))
+                    }
+                }
+                
                 .onDelete(perform: removeItem)
             }
             .navigationTitle("iExpense")
@@ -45,6 +69,13 @@ struct ContentView: View {
     func removeItem(at offset: IndexSet) {
         expenses.items.remove(atOffsets: offset)
     }
+    
+    func summOfItemsAmount() {
+        for item in expenses.items {
+            summOfAmount += item.amount
+        }
+    }
+    
     
 }
 
