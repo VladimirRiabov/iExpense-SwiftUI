@@ -9,34 +9,11 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var numbers = [Int]()
-    @State private var currentNumber = 1
+    @AppStorage("TapCount") private var tapCount = 0
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    ForEach(numbers, id: \.self) {
-                        Text("Row\($0)")
-                    }
-//                    .onDelete(perform: removeRows)
-                }
-                
-                Button("Tap") {
-                    numbers.append(currentNumber)
-                    currentNumber += 1
-                }
-                
-            }
-            .navigationTitle("onDelete")
-            .toolbar {
-                EditButton()
-            }
+        Button("Tap me \(tapCount)") {
+            tapCount += 1
         }
-        
-    }
-    //offset смещение, свайпинг строки
-    func removeRows(at offset: IndexSet) {
-        numbers.remove(atOffsets: offset)
     }
 }
 
