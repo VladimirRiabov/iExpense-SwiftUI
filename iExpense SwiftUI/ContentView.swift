@@ -13,7 +13,7 @@ struct ContentView: View {
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
     @State private var summOfAmount = 0.0
-
+//comment
     var body: some View {
         NavigationView {
             List {
